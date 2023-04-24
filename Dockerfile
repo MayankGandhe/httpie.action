@@ -1,4 +1,4 @@
-FROM python:3-slim-stretch
+FROM python:3.7.3-slim-stretch
 
 LABEL name="HTTP client for GitHub Actions"
 LABEL version="1.0.3"
