@@ -16,10 +16,7 @@ WORKDIR /
 COPY "entrypoint.sh" "Pipfile" "Pipfile.lock" /
 COPY "config.json" /.httpie/
 
-RUN apt-get update -y && \
-  apt-get install -y --no-install-recommends jq && \
-  rm -rf /var/lib/apt/lists/* && \
-  pip install --upgrade pip && \
+RUN pip install --upgrade pip && \
   pip install pipenv==2018.11.26 && \
   pipenv install --deploy --system
 
